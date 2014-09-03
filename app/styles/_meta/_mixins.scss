@@ -6,13 +6,19 @@
 @mixin fontDefault() {
   font-family: $fontDefault;
   font-style: normal;
-  font-weight: normal;
+  font-weight: 400;
+}
+
+@mixin fontSemibold() {
+  font-family: $fontDefault;
+  font-style: normal;
+  font-weight: 600;
 }
 
 @mixin fontHighlight() {
   font-family: $fontHighlight;
   font-style: normal;
-  font-weight: normal;
+  font-weight: 700;
 }
 
 @mixin breakpoint($point) {

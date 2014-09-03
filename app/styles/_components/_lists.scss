@@ -31,3 +31,10 @@ ol {
     display: inline-block;
   }
 }
+
+.list-middle-align {
+  li {
+    display: inline-block;
+    vertical-align: middle;
+  }
+}

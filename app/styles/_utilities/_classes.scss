@@ -37,6 +37,10 @@
   text-align: right;
 }
 
+.text-white {
+  color: #fff;
+}
+
 
 
 /*==========  BACKGROUND  ==========*/
@@ -46,7 +50,7 @@
 }
 
 .bg-gray {
-  background-color: $colorGrayLight;
+  background-color: $colorGrayLightBG;
 }
 
 

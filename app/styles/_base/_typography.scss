@@ -9,6 +9,7 @@ html, body, button {
 body {
   @include fontDefault();
   font-size: $fontBase;
+  background-color: $colorGrayDarkBG;
   color: $colorText;
   line-height: $lineHeight;
 }
@@ -26,6 +27,7 @@ h1, h2, h3, h4, h5, h6,
   @include fontHighlight();
   line-height: $lineHeightHeader;
   text-rendering: optimizeLegibility;
+  color: $colorGrayDark;
 }
 
 .h1, h1 {
@@ -42,6 +44,7 @@ h1, h2, h3, h4, h5, h6,
 
 .h4, h4 {
   font-size: $fontH4;
+  padding: 0 0 12px;
 }
 
 h5, .h5 {
@@ -50,6 +53,10 @@ h5, .h5 {
 
 h6, .h6 {
   font-size: $fontH6;
+}
+
+.highlight {
+  font-size: $fontLarge;
 }
 
 .small,

@@ -1,3 +1,40 @@
 /* ==========================================================================
   Icons
 ========================================================================== */
+
+
+.icon {
+  display: inline-block;
+  line-height: 1;
+  vertical-align: middle;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 100%;
+}
+
+.icon-envelope {
+  background-image: url(/img/icons/envelope.svg);
+  width: 52px;
+  height: 52px;
+  .no-svg & {
+    background-image: url(/img/icons/envelope.png);
+  }
+}
+
+.icon-tree {
+  background-image: url(/img/icons/tree.svg);
+  width: 52px;
+  height: 52px;
+  .no-svg & {
+    background-image: url(/img/icons/tree.png);
+  }
+}
+
+.icon-twitter {
+  background-image: url(/img/icons/twitter.svg);
+  width: 52px;
+  height: 52px;
+  .no-svg & {
+    background-image: url(/img/icons/twitter.png);
+  }
+}
