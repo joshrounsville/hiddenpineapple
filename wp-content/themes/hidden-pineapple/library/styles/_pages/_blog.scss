@@ -1,0 +1,265 @@
+/* ==========================================================================
+  Blog
+========================================================================== */
+
+
+.nav-categories {
+  position: relative;
+  bottom: -8px;
+  @include fontHighlight();
+  .show {
+    h5 {
+      color: $colorGrayDark;
+    }
+  }
+  h5 {
+    color: $colorGrayLight;
+    transition: color 0.13s ease-in-out;
+    cursor: default;
+  }
+  ul {
+    padding: 10px 0;
+    &.show {
+      .cat-item {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+  }
+  li {
+    display: inline-block;
+    margin: 0 20px 0 0;
+    &:last-of-type {
+      margin: 0;
+    }
+  }
+  .cat-item {
+    opacity: 0;
+    transform: translateX(25px);
+    transition: all 0.2s ease-in-out;
+    &:nth-of-type(2) {
+      transition-delay: 0.1s;
+    }
+    &:nth-of-type(3) {
+      transition-delay: 0.15s;
+    }
+    &:nth-of-type(4) {
+      transition-delay: 0.2s;
+    }
+    &:nth-of-type(5) {
+      transition-delay: 0.25s;
+    }
+  }
+  a {
+    display: inline-block;
+    margin-right: 3px;
+    &:hover,
+    &:focus {
+      &:after {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    &:after {
+      content: " ";
+      display: block;
+      height: 3px;
+      opacity: 0;
+      transform: translateY(4px);
+      transition: opacity 0.1s ease-in-out, transform 0.1s ease-in-out;
+    }
+  }
+}
+
+.cat-item-4 {
+  color: $colorGreen;
+  a {
+    color: $colorGreen;
+    &:after {
+      background: $colorGreen;
+    }
+  }
+}
+
+.cat-item-5 {
+  color: $colorBlue;
+  a {
+    color: $colorBlue;
+    &:after {
+      background: $colorBlue;
+    }
+  }
+}
+
+.cat-item-6 {
+  color: $colorOrange;
+  a {
+    color: $colorOrange;
+    &:after {
+      background: $colorOrange;
+    }
+  }
+}
+
+.cat-item-7 {
+  color: $colorRed;
+  a {
+    color: $colorRed;
+    &:after {
+      background: $colorRed;
+    }
+  }
+}
+
+
+article {
+  @include clearfix();
+  margin-bottom: 60px;
+  &.app-updates {
+    time {
+      color: $colorBlue;
+    }
+    a {
+      &:hover,
+      &:focus {
+        color: $colorBlue;
+      }
+    }
+    .read-more {
+      border-color: transparent;
+      &:hover,
+      &:focus {
+        color: $colorGrayDark;
+        border-color: $colorBlue;
+      }
+    }
+  }
+  &.hidden-pineapple {
+    time {
+      color: $colorOrange;
+    }
+    a {
+      &:hover,
+      &:focus {
+        color: $colorOrange;
+      }
+    }
+    .read-more {
+      border-color: transparent;
+      &:hover,
+      &:focus {
+        color: $colorGrayDark;
+        border-color: $colorOrange;
+      }
+    }
+  }
+  &.news {
+    time {
+      color: $colorGreen;
+    }
+    a {
+      &:hover,
+      &:focus {
+        color: $colorGreen;
+      }
+    }
+    .read-more {
+      border-color: transparent;
+      &:hover,
+      &:focus {
+        color: $colorGrayDark;
+        border-color: $colorGreen;
+      }
+    }
+  }
+  &.tips {
+    time {
+      color: $colorRed;
+    }
+    a {
+      &:hover,
+      &:focus {
+        color: $colorRed;
+      }
+    }
+    .read-more {
+      border-color: transparent;
+      &:hover,
+      &:focus {
+        color: $colorGrayDark;
+        border-color: $colorRed;
+      }
+    }
+  }
+
+  time {
+    display: block;
+    padding: 0 0 5px;
+  }
+  h2 {
+    padding: 0 0 15px;
+  }
+  .read-more {
+    float: left;
+    font-size: $fontBase;
+    text-transform: lowercase;
+    @include fontHighlight();
+    padding: 15px 0 0;
+    border-bottom: 4px solid $colorGrayDark;
+  }
+}
+
+.article-excerpt {
+  p {
+    font-size: $fontH3;
+  }
+}
+
+.article-single {
+  font-size: 18px;
+  time {
+    font-size: 20px;
+  }
+  p {
+    padding: 0 0 30px;
+    &:first-of-type {
+      @include fontHighlight();
+      color: $colorGrayDark;
+      font-size: $fontH3;
+    }
+  }
+  img {
+    display: block;
+    padding: 0 0 40px;
+  }
+  .wp-caption {
+    padding: 0 40px 40px;
+    img {
+      padding: 0 0 10px;
+    }
+    p {
+      padding: 0;
+      font-size: 13px;
+      color: $colorGrayLight;
+    }
+  }
+}
+
+.sidebar {
+  padding-top: 10px;
+  .show {
+    label {
+      color: $colorGrayDark;
+    }
+  }
+}
+
+.input-search {
+  opacity: 0;
+  transform: translateX(15px);
+  transition: all 0.2s ease-in-out;
+  .show & {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}

@@ -1,0 +1,31 @@
+/* ==========================================================================
+  Footer
+========================================================================== */
+
+
+footer {
+  padding: 25px 0 50px;
+  color: $colorGray;
+  @include fontSemibold();
+}
+
+.nav-footer-social {
+  text-align: right;
+  li {
+    display: inline-block;
+    margin: 0 0 0 10px;
+  }
+  a {
+    &:hover,
+    &:focus {
+      i {
+        transform: scale(1.07);
+      }
+    }
+  }
+}
+
+.logo-footer {
+  position: relative;
+  top: -2px;
+}

@@ -1,0 +1,37 @@
+/* ==========================================================================
+  Twitter Feed
+========================================================================== */
+
+
+.twitter-feed-wrap {
+  i {
+    color: #38c1fa;
+    font-size: 34px;
+  }
+}
+
+.twitter-feed {
+  padding: 20px 0;
+  @include fontHighlight();
+}
+
+.tweet {
+  font-size: $fontH3;
+  color: #fff;
+  a {
+    color: #38c1fa;
+    &:hover,
+    &:focus {
+      color: #fff;
+    }
+  }
+}
+
+.timePosted {
+  font-size: $fontH5;
+  color: $colorGray;
+}
+
+.interact {
+  display: none;
+}

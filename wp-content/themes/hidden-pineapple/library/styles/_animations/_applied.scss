@@ -1,0 +1,18 @@
+/* ==========================================================================
+  Animation - Applied
+========================================================================== */
+
+
+.fade-in-left {
+  .visible & {
+    animation: fadeInLeft 0.4s both;
+  }
+}
+
+@for $i from 1 through 4 {
+  .delay-#{$i} {
+    .visible & {
+      animation-delay: 0.5s + ($i * 0.05);
+    }
+  }
+}

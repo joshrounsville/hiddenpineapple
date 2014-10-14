@@ -1,0 +1,54 @@
+/* ==========================================================================
+  Home
+========================================================================== */
+
+
+.bio {
+  padding: 10px 0 0;
+  h4 {
+    padding: 0 0 4px;
+  }
+  h5 {
+    padding: 0 0 10px;
+    color: $colorGray;
+  }
+  p {
+    padding: 0;
+  }
+}
+
+.bio-twitter {
+  display: block;
+  position: relative;
+  &:hover,
+  &:focus {
+    .twitter-overlay {
+      opacity: 1;
+      transform: scale(1.2);
+    }
+    img {
+      opacity: 0.1;
+    }
+  }
+  img {
+    transition: opacity 0.15s ease-in-out;
+  }
+}
+
+.twitter-overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  text-align: center;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.15s ease-in-out, transform 0.15s ease-in-out;
+  i {
+    font-size: 50px;
+    line-height: 50px;
+    color: #38c1fa;
+    @include vAlign();
+  }
+}

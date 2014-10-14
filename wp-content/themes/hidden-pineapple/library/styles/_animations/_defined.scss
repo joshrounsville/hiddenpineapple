@@ -1,0 +1,65 @@
+/* ==========================================================================
+  Animation - Defined
+========================================================================== */
+
+
+.animate {
+  animation-fill-mode: both;
+}
+
+
+/*==========  ORANGE RED GRADIENT ==========*/
+
+@keyframes orangeRedGradient {
+  0% {
+    background-color: $colorRed;
+  }
+  50% {
+    background-color: $colorOrange;
+  }
+  100% {
+    background-color: $colorRed;
+  }
+}
+
+
+
+
+/*==========  FADE IN  ==========*/
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+
+
+/*==========  FADE OUT  ==========*/
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+
+/*==========  FADE IN LEFT ==========*/
+
+@keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+

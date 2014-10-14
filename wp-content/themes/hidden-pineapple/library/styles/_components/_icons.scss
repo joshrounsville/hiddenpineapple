@@ -1,0 +1,76 @@
+/* ==========================================================================
+  Icons
+========================================================================== */
+
+
+.icon {
+  display: inline-block;
+  line-height: 1;
+  vertical-align: middle;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 100%;
+}
+
+.icon-envelope {
+  background-image: url(../img/icons/envelope.svg);
+  width: 52px;
+  height: 52px;
+  .no-svg & {
+    background-image: url(../img/icons/envelope.png);
+  }
+}
+
+.icon-tree {
+  background-image: url(../img/icons/tree.svg);
+  width: 52px;
+  height: 52px;
+  .no-svg & {
+    background-image: url(../img/icons/tree.png);
+  }
+}
+
+.icon-twitter {
+  background-image: url(../img/icons/twitter.svg);
+  width: 52px;
+  height: 52px;
+  .no-svg & {
+    background-image: url(../img/icons/twitter.png);
+  }
+}
+
+.icon-lightbulb {
+  background-image: url(../img/icons/lightbulb.svg);
+  width: 80px;
+  height: 80px;
+  .no-svg & {
+    background-image: url(../img/icons/lightbulb.png);
+  }
+}
+
+.icon-compass {
+  background-image: url(../img/icons/compass.svg);
+  width: 80px;
+  height: 80px;
+  .no-svg & {
+    background-image: url(../img/icons/compass.png);
+  }
+}
+
+.icon-gear {
+  background-image: url(../img/icons/gear.svg);
+  width: 80px;
+  height: 80px;
+  .no-svg & {
+    background-image: url(../img/icons/gear.png);
+  }
+}
+
+.icon-sailboat {
+  background-image: url(../img/icons/sailboat.svg);
+  width: 80px;
+  height: 80px;
+  .no-svg & {
+    background-image: url(../img/icons/sailboat.png);
+  }
+}
