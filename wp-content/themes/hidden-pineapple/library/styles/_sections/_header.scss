@@ -4,11 +4,27 @@
 
 
 header {
-  padding: 40px 0 130px;
+  padding: 40px 0 100px;
   color: #fff;
-  animation: orangeRedGradient 10s both infinite;
+  animation: orangeRedGradient 15s both infinite;
+  background-image: linear-gradient(rgba(246, 166, 69, 0.0), rgba(246, 166, 69, 0.5));
+  background-blend-mode: multiply;
+  .homde & {
+    padding: 40px 0 150px;
+    h1 {
+      padding: 130px 0 0;
+    }
+  }
+  .blog & {
+    animation: redPinkGradient 15s both infinite;
+    background-image: linear-gradient(rgba(221, 36, 118, 0.0), rgba(221, 36, 118, 0.5));
+  }
+  .single-post & {
+    animation: none;
+    background: $colorBlue;
+  }
   h1 {
-    padding: 130px 0 0 0;
+    padding: 100px 0 0 0;
     color: #fff;
   }
 }

@@ -63,7 +63,13 @@
 
         <div class="row">
           <div class="span12">
-            <h1><span class="break">We're Hidden Pineapple, a studio committed</span> to creating <span class="rotating-text-one">useful</span> and <span class="rotating-text-two">beautiful</span> apps</h1>
+            <?php if ( is_home() ) : ?>
+            <h1>Check in for some news.</h1>
+            <?php elseif ( is_single() ) : ?>
+            <h1><?php the_title(); ?></h1>
+            <?php else : ?>
+            <h1><?php the_field('headline'); ?></h1>
+            <?php endif; ?>
           </div>
         </div>
 
