@@ -9,6 +9,12 @@
   font-weight: 400;
 }
 
+@mixin fontLight() {
+  font-family: $fontDefault;
+  font-style: normal;
+  font-weight: 300;
+}
+
 @mixin fontSemibold() {
   font-family: $fontDefault;
   font-style: normal;

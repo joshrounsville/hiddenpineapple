@@ -98,18 +98,87 @@ $(function() {
 
 
 
+  //////// word changer
+
+  var wordChanger = function() {
+
+    var words1 = [
+      'useful',
+      'fresh',
+      'unique',
+      'sleek',
+      'refined',
+      'practical'
+    ];
+
+    var words2 = [
+      'beautiful',
+      'innovative',
+      'helpful',
+      'compelling',
+      'essential',
+      'fun'
+    ];
+
+    var target1 = $('span.word-1');
+    var target2 = $('span.word-2');
+    var counter = 1;
+
+    var timer = setInterval(function() {
+
+      var item1 = '<span>' + words1[counter] + '</span>';
+      var width1;
+
+      var item2 = '<span>' + words2[counter] + '</span>';
+      var width2;
+
+
+      target1.removeClass('rotate');
+      target2.removeClass('rotate');
+
+      setTimeout(function() {
+        target1.html( item1 );
+        width1 = $(target1).find('span').width();
+        target1.addClass('rotate').css('width', width1);
+
+        target2.html( item2 );
+        width2 = $(target2).find('span').width();
+        target2.addClass('rotate').css('width', width2);
+
+      }, 500);
+
+      counter++;
+
+      if ( counter === words1.length ) {
+        counter = 0;
+      }
+
+
+    }, 3000);
+
+  };
+
+  if ( !isPhone && body.hasClass('home') ) {
+    wordChanger();
+  }
+
+
   //////// hide show elements on target hover
 
   var showElementsHover = function() {
     var target = $('.hover-target');
-    var targetWrap = $('.hover-wrap');
+    var inputSearch = $('.input-search');
 
     $(target).mouseenter(function() {
-      $(this).parents('.hover-wrap').addClass('show');
+      $(this).addClass('show');
     });
 
-    $(targetWrap).mouseleave(function() {
-      $(this).removeClass('show');
+    $(target).mouseleave(function() {
+
+      if ( !inputSearch.is(':focus') ) {
+        $(this).removeClass('show');
+      }
+
     });
   };
 

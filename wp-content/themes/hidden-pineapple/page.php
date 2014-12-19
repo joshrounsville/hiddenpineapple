@@ -57,7 +57,7 @@
   </section>
 
 
-  <section class="bg-white pad-v">
+  <!-- <section class="bg-white pad-v">
     <div class="container">
 
       <div class="row pad-b--20">
@@ -105,7 +105,7 @@
       </div>
 
     </div>
-  </section>
+  </section> -->
 
 
   <section class="pad-v bg-photo">

@@ -11,7 +11,7 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="icon" type="image/png" href="<?php echo get_template_directory_uri(); ?>/library/img/structure/favicon.png">
+    <link rel="icon" type="image/png" href="<?php echo get_template_directory_uri(); ?>/library/img/touch/favicon.png">
 
     <!-- Add to homescreen for Chrome on Android -->
     <meta name="mobile-web-app-capable" content="yes">
@@ -28,7 +28,7 @@
 
 		<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
 
-    <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700" rel="stylesheet" type="text/css">
 
 		<?php wp_head(); ?>
 
@@ -67,8 +67,12 @@
             <h1>Check in for some news.</h1>
             <?php elseif ( is_single() ) : ?>
             <h1><?php the_title(); ?></h1>
+            <?php elseif ( is_category() ) : ?>
+            <h1><span class="h3">Posts Categorized:</span> <?php single_cat_title(); ?></h1>
+            <?php elseif ( is_search() ) : ?>
+            <h1><span class="h3">Search Results for:</span> <?php echo esc_attr(get_search_query()); ?></h1>
             <?php else : ?>
-            <h1><?php the_field('headline'); ?></h1>
+            <h1 class="rotating-text"><span class="break">We're Hidden Pineapple, a studio committed</span> to creating <span class="word-wrap word-1 rotate">useful</span> and <span class="word-wrap word-2 rotate">beautiful</span> apps</h1>
             <?php endif; ?>
           </div>
         </div>

@@ -12,6 +12,18 @@
   background-size: 100%;
 }
 
+.icon-arrow-left {
+  background-image: url(../img/icons/arrow-left.svg);
+  width: 14px;
+  height: 27px;
+}
+
+.icon-arrow-right {
+  background-image: url(../img/icons/arrow-right.svg);
+  width: 14px;
+  height: 27px;
+}
+
 .icon-envelope {
   background-image: url(../img/icons/envelope.svg);
   width: 52px;
@@ -19,6 +31,12 @@
   .no-svg & {
     background-image: url(../img/icons/envelope.png);
   }
+}
+
+.icon-grid {
+  background-image: url(../img/icons/grid.svg);
+  width: 30px;
+  height: 30px;
 }
 
 .icon-tree {

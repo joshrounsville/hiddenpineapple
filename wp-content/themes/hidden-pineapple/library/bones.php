@@ -253,6 +253,26 @@ function bones_page_navi() {
   echo '</nav>';
 } /* end page navi */
 
+
+
+
+
+add_filter('body_class','add_category_to_single');
+function add_category_to_single($classes) {
+  if (is_single() ) {
+    global $post;
+    foreach((get_the_category($post->ID)) as $category) {
+      // add category slug to the $classes array
+      $classes[] = $category->category_nicename;
+    }
+  }
+  // return the $classes array
+  return $classes;
+}
+
+
+
+
 /*********************
 RANDOM CLEANUP ITEMS
 *********************/
@@ -271,7 +291,7 @@ add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
 function bones_excerpt_more($more) {
 	global $post;
 	// edit here if you like
-	return '... <br><a class="read-more" href="'. get_permalink($post->ID) .'">'. __( 'Read more', 'bonestheme' ) .'</a>';
+	return '...';
 }
 
 

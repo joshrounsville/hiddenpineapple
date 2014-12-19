@@ -95,6 +95,7 @@ input::-moz-focus-inner {
   }
   input {
     color: $colorGray;
+    @include fontDefault();
     &[type=search] {
       outline: 0;
       border: none;
@@ -103,6 +104,10 @@ input::-moz-focus-inner {
       padding: 8px 10px;
       width: 80%;
       border: 2px solid #f1f6fa;
+      &:hover,
+      &:focus {
+        background: lighten( #f1f6fa, 10% );
+      }
     }
   }
 }

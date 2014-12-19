@@ -79,3 +79,29 @@
   }
 }
 
+
+/*==========  FADE IN UP OUT ==========*/
+
+@keyframes fadeInUpOut {
+  0% {
+    display: none;
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  10% {
+    display: inline;
+    opacity: 1;
+    transform: translateY(0);
+  }
+  70% {
+    display: inline;
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    display: none;
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+}
+

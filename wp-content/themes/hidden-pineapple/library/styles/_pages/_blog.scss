@@ -7,7 +7,7 @@
   position: relative;
   bottom: -8px;
   @include fontHighlight();
-  .show {
+  .show & {
     h5 {
       color: $colorGrayDark;
     }
@@ -19,7 +19,7 @@
   }
   ul {
     padding: 10px 0;
-    &.show {
+    .show & {
       .cat-item {
         opacity: 1;
         transform: translateX(0);
@@ -197,21 +197,74 @@ article {
     padding: 0 0 5px;
   }
   h2 {
-    padding: 0 0 15px;
+    padding: 0 0 10px;
   }
   .read-more {
-    float: left;
     font-size: $fontBase;
     text-transform: lowercase;
     @include fontHighlight();
-    padding: 15px 0 0;
+    padding: 5px 0 0;
     border-bottom: 4px solid $colorGrayDark;
   }
 }
 
 .article-excerpt {
+  &.app-updates {
+    &:hover,
+    &:focus {
+      h2 {
+        color: $colorBlue;
+      }
+      .read-more {
+        border-color: $colorBlue;
+      }
+    }
+  }
+  &.hidden-pineapple {
+    &:hover,
+    &:focus {
+      h2 {
+        color: $colorOrange;
+      }
+      .read-more {
+        border-color: $colorOrange;
+      }
+    }
+  }
+  &.news {
+    &:hover,
+    &:focus {
+      h2 {
+        color: $colorGreen;
+      }
+      .read-more {
+        border-color: $colorGreen;
+      }
+    }
+  }
+  &.tips {
+    &:hover,
+    &:focus {
+      h2 {
+        color: $colorRed;
+      }
+      .read-more {
+        border-color: $colorRed;
+      }
+    }
+  }
+  h2 {
+    transition: color 0.2s ease-in-out;
+  }
   p {
     font-size: $fontH3;
+    line-height: 1.4;
+    color: $colorGray;
+    @include fontLight();
+  }
+  .read-more {
+    color: $colorGrayDark;
+    transition: border 0.2s ease-in-out;
   }
 }
 
@@ -247,7 +300,7 @@ article {
 
 .sidebar {
   padding-top: 10px;
-  .show {
+  .show & {
     label {
       color: $colorGrayDark;
     }
