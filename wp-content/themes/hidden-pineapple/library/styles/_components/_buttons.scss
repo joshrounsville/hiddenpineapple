@@ -12,9 +12,10 @@
   text-decoration: none;
   outline: 0;
   background: $colorBtn;
-  color: $colorText;
+  color: #fff;
   border: 3px solid $colorBtn;
   border-radius: 5px;
+  transition: all 0.13s ease-in-out;
   &:hover,
   &:focus {
     background: #4d4d4d;
@@ -41,6 +42,27 @@
     &:focus {
       border-color: #38c1fa;
       background: #38c1fa;
+    }
+  }
+
+  &.btn--form {
+    background: #4d4d4d;
+    border: 3px solid #4d4d4d;
+    pointer-events: none;
+    &:hover,
+    &:focus {
+      background: $colorBtn;
+      border: 3px solid $colorBtn;
+    }
+  }
+  &.btn--form-ready {
+    background: $colorBlue;
+    border-color: $colorBlue;
+    pointer-events: auto;
+    &:hover,
+    &:focus {
+      background: darken( $colorBlue, 10%) ;
+      border-color: darken( $colorBlue, 10%) ;
     }
   }
 }

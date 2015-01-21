@@ -3,6 +3,12 @@
 ========================================================================== */
 
 
+section {
+  .row {
+    animation: fadeIn 0.2s 0.35s both;
+  }
+}
+
 .bg-photo {
   background: url(../img/background/bg-gorge.png) no-repeat center center;
   background-size: cover;

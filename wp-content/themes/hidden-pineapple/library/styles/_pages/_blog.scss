@@ -69,6 +69,39 @@
       transition: opacity 0.1s ease-in-out, transform 0.1s ease-in-out;
     }
   }
+
+  @include breakpoint(medium) {
+    li {
+      &:first-of-type {
+        display: block;
+      }
+    }
+    h5 {
+      color: $colorGrayDark;
+      display: block;
+      padding: 0 0 7px;
+    }
+    .cat-item {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  @include breakpoint(small) {
+    li {
+      &:first-of-type {
+        display: block;
+      }
+    }
+    h5 {
+      color: $colorGrayDark;
+      display: block;
+      padding: 0 0 7px;
+    }
+    .cat-item {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
 }
 
 .cat-item-4 {
@@ -266,6 +299,22 @@ article {
     color: $colorGrayDark;
     transition: border 0.2s ease-in-out;
   }
+
+  @include breakpoint(large) {
+    p {
+      font-size: $fontH3 - 3;
+    }
+  }
+  @include breakpoint(medium) {
+    p {
+      font-size: $fontH3 - 4;
+    }
+  }
+  @include breakpoint(small) {
+    p {
+      font-size: $fontH3 - 5;
+    }
+  }
 }
 
 .article-single {
@@ -287,6 +336,7 @@ article {
   }
   .wp-caption {
     padding: 0 40px 40px;
+    max-width: 100%;
     img {
       padding: 0 0 10px;
     }
@@ -294,6 +344,17 @@ article {
       padding: 0;
       font-size: 13px;
       color: $colorGrayLight;
+    }
+  }
+
+  @include breakpoint(medium) {
+    .wp-caption {
+      padding: 0 20px 20px;
+    }
+  }
+  @include breakpoint(small) {
+    .wp-caption {
+      padding: 0 20px 20px;
     }
   }
 }
@@ -305,6 +366,20 @@ article {
       color: $colorGrayDark;
     }
   }
+
+
+  @include breakpoint(medium) {
+    label {
+      color: $colorGrayDark;
+      display: block;
+    }
+  }
+  @include breakpoint(small) {
+    label {
+      color: $colorGrayDark;
+      display: block;
+    }
+  }
 }
 
 .input-search {
@@ -312,6 +387,15 @@ article {
   transform: translateX(15px);
   transition: all 0.2s ease-in-out;
   .show & {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  @include breakpoint(medium) {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  @include breakpoint(small) {
     opacity: 1;
     transform: translateX(0);
   }

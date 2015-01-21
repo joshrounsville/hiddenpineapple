@@ -68,7 +68,15 @@ abbr[title] {
 }
 
 blockquote {
-  margin: 1em 40px;
+  margin: 0;
+  padding: 20px 40px;
+
+  @include breakpoint(medium) {
+    padding: 20px;
+  }
+  @include breakpoint(small) {
+    padding: 20px;
+  }
 }
 
 dfn {

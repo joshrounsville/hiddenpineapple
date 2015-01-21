@@ -26,6 +26,12 @@
   .icon-arrow-right {
     margin-left: 7px;
   }
+
+  @include breakpoint(small) {
+    ul {
+      padding: 0;
+    }
+  }
 }
 
 .pagination-prev {

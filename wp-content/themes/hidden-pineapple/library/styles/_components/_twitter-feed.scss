@@ -25,6 +25,13 @@
       color: #fff;
     }
   }
+
+  @include breakpoint(medium) {
+    font-size: $fontH3 - 5;
+  }
+  @include breakpoint(small) {
+    font-size: $fontH3 - 7;
+  }
 }
 
 .timePosted {

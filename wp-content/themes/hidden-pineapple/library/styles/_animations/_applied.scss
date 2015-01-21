@@ -7,6 +7,13 @@
   .visible & {
     animation: fadeInLeft 0.4s both;
   }
+
+  @include breakpoint(small) {
+    opacity: 1;
+    .visible & {
+      animation: none;
+    }
+  }
 }
 
 @for $i from 1 through 4 {

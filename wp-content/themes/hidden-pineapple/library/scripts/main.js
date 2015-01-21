@@ -158,7 +158,7 @@ $(function() {
 
   };
 
-  if ( !isPhone && body.hasClass('home') ) {
+  if ( isDesktop && body.hasClass('home') ) {
     wordChanger();
   }
 
@@ -183,6 +183,39 @@ $(function() {
   };
 
   showElementsHover();
+
+
+
+
+
+
+
+
+  //////// form validation
+
+  var checkFill = function() {
+    var form = $('form.wpcf7-form');
+    var input = $('form .input-styled');
+    var formBtn = $('.btn--form');
+
+    $(input).on('keyup', function() {
+
+      var empty = $(input).filter(function() {
+        return this.value === '';
+      });
+
+      if ( !empty.length ) {
+        formBtn.addClass('btn--form-ready');
+      } else {
+        formBtn.removeClass('btn--form-ready');
+      }
+
+    });
+
+  };
+
+  checkFill();
+
 
 
 

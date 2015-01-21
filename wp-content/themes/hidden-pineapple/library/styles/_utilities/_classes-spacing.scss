@@ -13,6 +13,11 @@
 .pad-v {
   padding-top: $padding;
   padding-bottom: $padding;
+
+  @include breakpoint(small) {
+    padding-top: $padding - 30;
+    padding-bottom: $padding - 30;
+  }
 }
 
 .pad-h {
@@ -104,6 +109,10 @@
 
 .mar-t {
   margin-top: $margin;
+
+  @include breakpoint(small) {
+    margin-top: $margin - 30;
+  }
 }
 
 .mar-t--2x {
@@ -125,6 +134,10 @@
 
 .mar-b {
   margin-bottom: $margin;
+
+  @include breakpoint(small) {
+    margin-bottom: $margin - 30;
+  }
 }
 
 .mar-b--2x {

@@ -12,6 +12,7 @@ body {
   background-color: $colorGrayDarkBG;
   color: $colorText;
   line-height: $lineHeight;
+  animation: fadeIn 0.13s both;
 }
 
 h1, h2, h3, h4, h5, h6, p {
@@ -32,14 +33,41 @@ h1, h2, h3, h4, h5, h6,
 
 .h1, h1 {
   font-size: $fontH1;
+  @include breakpoint(large) {
+    font-size: $fontH1 - 4;
+  }
+  @include breakpoint(medium) {
+    font-size: $fontH1 - 6;
+  }
+  @include breakpoint(small) {
+    font-size: $fontH1 - 10;
+  }
 }
 
 .h2, h2 {
   font-size: $fontH2;
+  @include breakpoint(large) {
+    font-size: $fontH2 - 4;
+  }
+  @include breakpoint(medium) {
+    font-size: $fontH2 - 6;
+  }
+  @include breakpoint(small) {
+    font-size: $fontH2 - 6;
+  }
 }
 
 .h3, h3 {
   font-size: $fontH3;
+  @include breakpoint(large) {
+    font-size: $fontH3 - 4;
+  }
+  @include breakpoint(medium) {
+    font-size: $fontH3 - 5;
+  }
+  @include breakpoint(small) {
+    font-size: $fontH3 - 5;
+  }
 }
 
 .h4, h4 {
@@ -56,6 +84,16 @@ h6, .h6 {
 
 .highlight {
   font-size: $fontLarge;
+
+  @include breakpoint(large) {
+    font-size: $fontLarge - 3;
+  }
+  @include breakpoint(medium) {
+    font-size: $fontLarge - 3;
+  }
+  @include breakpoint(small) {
+    font-size: $fontLarge - 3;
+  }
 }
 
 .small,

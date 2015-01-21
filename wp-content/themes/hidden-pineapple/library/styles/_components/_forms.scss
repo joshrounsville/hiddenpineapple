@@ -83,32 +83,88 @@ input::-moz-focus-inner {
 }
 
 
+/*==========  GENERAL INPUT  ==========*/
+
+label {
+  display: block;
+  color: $colorGrayLight;
+  @include fontHighlight();
+  padding: 0 0 5px 0;
+  transition: all 0.13s ease-in-out;
+}
+
+.input-styled {
+  display: block;
+  color: $colorGray;
+  @include fontDefault();
+  outline: 0;
+  border: none;
+  border-radius: 0;
+  background: #f1f6fa;
+  padding: 8px 10px;
+  width: 100%;
+  border: 2px solid #f1f6fa;
+  transition: all 0.13s ease-in-out;
+  &:hover,
+  &:focus {
+    background: lighten( #f1f6fa, 10% );
+  }
+}
+
+
+
 /*==========  SEARCH  ==========*/
 
 .form-search {
-  label {
-    color: $colorGrayLight;
-    @include fontHighlight();
-    padding: 0 10px 0 0;
-    width: 20%;
-    transition: all 0.13s ease-in-out;
+  .input-search {
+    display: inline;
+    width: 80%;
   }
-  input {
-    color: $colorGray;
-    @include fontDefault();
-    &[type=search] {
-      outline: 0;
-      border: none;
-      border-radius: 0;
-      background: #f1f6fa;
-      padding: 8px 10px;
-      width: 80%;
-      border: 2px solid #f1f6fa;
-      &:hover,
-      &:focus {
-        background: lighten( #f1f6fa, 10% );
-      }
+  label {
+    display: inline;
+    width: 20%;
+    padding: 0 10px 0 0;
+  }
+
+  @include breakpoint(large) {
+    .input-search {
+      width: 60%;
     }
+  }
+  @include breakpoint(medium) {
+    .input-search {
+      width: 100%;
+    }
+  }
+  @include breakpoint(small) {
+    .input-search {
+      width: 100%;
+    }
+  }
+}
+
+span.wpcf7-not-valid-tip {
+  color: $colorRed;
+  font-size: 14px;
+  padding: 2px 0 0 0;
+}
+
+input,
+textarea {
+  &.wpcf7-not-valid {
+    border-color: $colorRed;
+  }
+}
+
+
+div {
+  &.wpcf7-response-output {
+    margin: 0;
+    padding: 15px 0 0 0;
+  }
+  &.wpcf7-mail-sent-ok {
+    border: none;
+    color: $colorBlue;
   }
 }
 
