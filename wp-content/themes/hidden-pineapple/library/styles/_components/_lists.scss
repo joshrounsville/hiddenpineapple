@@ -9,23 +9,6 @@ ul, ol {
   padding: 0;
 }
 
-ol {
-  counter-reset: list;
-  > li {
-    position: relative;
-    padding-left: 32px;
-    &:before {
-      counter-increment: list;
-      content: "0" counter(list);
-      color: inherit;
-      font-weight: 400;
-      display: inline-block;
-      position: absolute;
-      left: 0;
-    }
-  }
-}
-
 .list-inline {
   li {
     display: inline-block;
@@ -44,6 +27,27 @@ ol {
     padding-right: 35px;
     &:last-of-type {
       padding-right: 0;
+    }
+  }
+
+  @include breakpoint(large) {
+    li {
+      padding-right: 25px;
+    }
+  }
+  @include breakpoint(medium) {
+    li {
+      padding-right: 20px;
+    }
+  }
+  @include breakpoint(small) {
+    li {
+      display: block;
+      width: 100%;
+      padding: 0 0 15px 20px;
+      &:first-of-type {
+        padding: 0 0 15px;
+      }
     }
   }
 }

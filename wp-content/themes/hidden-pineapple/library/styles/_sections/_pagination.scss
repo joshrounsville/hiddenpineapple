@@ -28,8 +28,15 @@
   }
 
   @include breakpoint(small) {
+    font-size: $fontSmall - 2;
     ul {
       padding: 0;
+    }
+    .icon-arrow-left {
+      margin-right: 3px;
+    }
+    .icon-arrow-right {
+      margin-left: 3px;
     }
   }
 }

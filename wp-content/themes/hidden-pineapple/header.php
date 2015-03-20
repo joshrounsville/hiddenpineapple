@@ -7,7 +7,7 @@
 		<meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
-		<title><?php wp_title(''); ?></title>
+		<title><?php wp_title('•', '•', right); ?></title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -71,6 +71,8 @@
             <h1><span class="h3">Posts Categorized:</span> <?php single_cat_title(); ?></h1>
             <?php elseif ( is_search() ) : ?>
             <h1><span class="h3">Search Results for:</span> <?php echo esc_attr(get_search_query()); ?></h1>
+            <?php elseif ( is_404() ) : ?>
+            <h1>404 Error</h1>
             <?php else : ?>
             <h1 class="rotating-text"><span class="break">We're Hidden Pineapple, a studio committed</span> to creating <span class="word-wrap word-1 rotate">useful</span> and <span class="word-wrap word-2 rotate">beautiful</span> apps</h1>
             <?php endif; ?>

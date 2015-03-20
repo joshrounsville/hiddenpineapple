@@ -194,7 +194,6 @@ $(function() {
   //////// form validation
 
   var checkFill = function() {
-    var form = $('form.wpcf7-form');
     var input = $('form .input-styled');
     var formBtn = $('.btn--form');
 

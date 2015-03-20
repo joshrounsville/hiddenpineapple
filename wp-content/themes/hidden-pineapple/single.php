@@ -4,7 +4,7 @@
 		<div class="container">
 
 			<div class="row">
-				<div class="span8">
+				<div class="span8 offset2 span-m-10 offset-m-1">
 					<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 					<?php $category = get_the_category(); ?>
 						<article class="article-single <?php echo $category[0]->slug; ?>">

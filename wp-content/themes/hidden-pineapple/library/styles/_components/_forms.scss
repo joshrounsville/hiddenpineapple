@@ -105,6 +105,7 @@ label {
   width: 100%;
   border: 2px solid #f1f6fa;
   transition: all 0.13s ease-in-out;
+  -webkit-appearance: none;
   &:hover,
   &:focus {
     background: lighten( #f1f6fa, 10% );

@@ -11,8 +11,8 @@
           <div class="span6">
             <nav class="nav-footer-social">
               <ul class="list-middle-align">
-                <li><a href="#" class="twitter"><i class="icon icon-twitter"></i></a></li>
-                <li><a href="#" class="email"><i class="icon icon-envelope"></i></a></li>
+                <li><a href="https://twitter.com/thehp" target="_blank" class="twitter"><i class="icon icon-twitter"></i></a></li>
+                <li><a href="mailto:hi@hiddenpineapple.com" target="_blank" class="email"><i class="icon icon-envelope"></i></a></li>
               </ul>
             </nav>
           </div>

@@ -22,7 +22,6 @@
     .show & {
       .cat-item {
         opacity: 1;
-        transform: translateX(0);
       }
     }
   }
@@ -34,8 +33,7 @@
     }
   }
   .cat-item {
-    opacity: 0;
-    transform: translateX(25px);
+    opacity: 0.5;
     transition: all 0.2s ease-in-out;
     &:nth-of-type(2) {
       transition-delay: 0.1s;
@@ -322,12 +320,71 @@ article {
   time {
     font-size: 20px;
   }
+  h3 {
+    padding: 0 0 12px;
+  }
   p {
     padding: 0 0 30px;
     &:first-of-type {
       @include fontHighlight();
       color: $colorGrayDark;
       font-size: $fontH3;
+      display: block;
+      width: 850px;
+    }
+  }
+  ul, ol {
+    padding: 0 0 30px 30px;
+  }
+  ul {
+    list-style-type: disc;
+  }
+  ol {
+    list-style-type: decimal;
+  }
+  li {
+    padding: 0 0 5px;
+    &:last-of-type {
+      padding: 0;
+    }
+  }
+  a {
+    @include fontHighlight();
+  }
+  &.app-updates {
+    a {
+      color: $colorBlue;
+      &:hover,
+      &:focus {
+        color: darken( $colorBlue, 12% );
+      }
+    }
+  }
+  &.hidden-pineapple {
+    a {
+      color: $colorOrange;
+      &:hover,
+      &:focus {
+        color: darken( $colorOrange, 12% );
+      }
+    }
+  }
+  &.news {
+    a {
+      color: $colorGreen;
+      &:hover,
+      &:focus {
+        color: darken( $colorGreen, 12% );
+      }
+    }
+  }
+  &.tips {
+    a {
+      color: $colorRed;
+      &:hover,
+      &:focus {
+        color: darken( $colorRed, 12% );
+      }
     }
   }
   img {
@@ -347,14 +404,45 @@ article {
     }
   }
 
+  @include breakpoint(large) {
+    p {
+      &:first-of-type {
+        width: 750px;
+        font-size: $fontH3 - 2;
+      }
+    }
+    .wp-caption {
+      p {
+        font-size: 13px;
+      }
+    }
+  }
   @include breakpoint(medium) {
+    p {
+      &:first-of-type {
+        width: 100%;
+        font-size: $fontH3 - 4;
+      }
+    }
     .wp-caption {
       padding: 0 20px 20px;
+      p {
+        font-size: 13px;
+      }
     }
   }
   @include breakpoint(small) {
+    p {
+      &:first-of-type {
+        width: 100%;
+        font-size: $fontH3 - 5;
+      }
+    }
     .wp-caption {
       padding: 0 20px 20px;
+      p {
+        font-size: 13px;
+      }
     }
   }
 }
@@ -378,17 +466,16 @@ article {
     label {
       color: $colorGrayDark;
       display: block;
+      padding: 0 0 7px;
     }
   }
 }
 
 .input-search {
-  opacity: 0;
-  transform: translateX(15px);
+  opacity: 0.5;
   transition: all 0.2s ease-in-out;
   .show & {
     opacity: 1;
-    transform: translateX(0);
   }
 
   @include breakpoint(medium) {
